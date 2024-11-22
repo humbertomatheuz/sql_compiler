@@ -17,39 +17,12 @@ class EasySQLListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by EasySQLParser#QuerySelect.
-    def enterQuerySelect(self, ctx:EasySQLParser.QuerySelectContext):
+    # Enter a parse tree produced by EasySQLParser#query.
+    def enterQuery(self, ctx:EasySQLParser.QueryContext):
         pass
 
-    # Exit a parse tree produced by EasySQLParser#QuerySelect.
-    def exitQuerySelect(self, ctx:EasySQLParser.QuerySelectContext):
-        pass
-
-
-    # Enter a parse tree produced by EasySQLParser#QueryInsert.
-    def enterQueryInsert(self, ctx:EasySQLParser.QueryInsertContext):
-        pass
-
-    # Exit a parse tree produced by EasySQLParser#QueryInsert.
-    def exitQueryInsert(self, ctx:EasySQLParser.QueryInsertContext):
-        pass
-
-
-    # Enter a parse tree produced by EasySQLParser#QueryDelete.
-    def enterQueryDelete(self, ctx:EasySQLParser.QueryDeleteContext):
-        pass
-
-    # Exit a parse tree produced by EasySQLParser#QueryDelete.
-    def exitQueryDelete(self, ctx:EasySQLParser.QueryDeleteContext):
-        pass
-
-
-    # Enter a parse tree produced by EasySQLParser#QueryDeleteTable.
-    def enterQueryDeleteTable(self, ctx:EasySQLParser.QueryDeleteTableContext):
-        pass
-
-    # Exit a parse tree produced by EasySQLParser#QueryDeleteTable.
-    def exitQueryDeleteTable(self, ctx:EasySQLParser.QueryDeleteTableContext):
+    # Exit a parse tree produced by EasySQLParser#query.
+    def exitQuery(self, ctx:EasySQLParser.QueryContext):
         pass
 
 
@@ -62,21 +35,30 @@ class EasySQLListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by EasySQLParser#CampoComAgregador.
-    def enterCampoComAgregador(self, ctx:EasySQLParser.CampoComAgregadorContext):
+    # Enter a parse tree produced by EasySQLParser#campo.
+    def enterCampo(self, ctx:EasySQLParser.CampoContext):
         pass
 
-    # Exit a parse tree produced by EasySQLParser#CampoComAgregador.
-    def exitCampoComAgregador(self, ctx:EasySQLParser.CampoComAgregadorContext):
+    # Exit a parse tree produced by EasySQLParser#campo.
+    def exitCampo(self, ctx:EasySQLParser.CampoContext):
         pass
 
 
-    # Enter a parse tree produced by EasySQLParser#CampoSimples.
-    def enterCampoSimples(self, ctx:EasySQLParser.CampoSimplesContext):
+    # Enter a parse tree produced by EasySQLParser#definicoes.
+    def enterDefinicoes(self, ctx:EasySQLParser.DefinicoesContext):
         pass
 
-    # Exit a parse tree produced by EasySQLParser#CampoSimples.
-    def exitCampoSimples(self, ctx:EasySQLParser.CampoSimplesContext):
+    # Exit a parse tree produced by EasySQLParser#definicoes.
+    def exitDefinicoes(self, ctx:EasySQLParser.DefinicoesContext):
+        pass
+
+
+    # Enter a parse tree produced by EasySQLParser#definicao.
+    def enterDefinicao(self, ctx:EasySQLParser.DefinicaoContext):
+        pass
+
+    # Exit a parse tree produced by EasySQLParser#definicao.
+    def exitDefinicao(self, ctx:EasySQLParser.DefinicaoContext):
         pass
 
 
@@ -140,6 +122,15 @@ class EasySQLListener(ParseTreeListener):
 
     # Exit a parse tree produced by EasySQLParser#valor.
     def exitValor(self, ctx:EasySQLParser.ValorContext):
+        pass
+
+
+    # Enter a parse tree produced by EasySQLParser#tipo_dado.
+    def enterTipo_dado(self, ctx:EasySQLParser.Tipo_dadoContext):
+        pass
+
+    # Exit a parse tree produced by EasySQLParser#tipo_dado.
+    def exitTipo_dado(self, ctx:EasySQLParser.Tipo_dadoContext):
         pass
 
 

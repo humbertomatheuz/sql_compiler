@@ -3,17 +3,22 @@ grammar EasySQL;
 prog: query EOF ;
 
 query
-    : 'MOSTRAR' campos ('POR' grupos)? ('ONDE' condicoes)? SEMICOLON        # QuerySelect
-    | 'INSERIR EM' IDENTIFICADOR ('(' colunas ')')? 'VALORES' '(' valores ')' SEMICOLON  # QueryInsert
-    | 'REMOVER DE' IDENTIFICADOR ('ONDE' condicoes)? SEMICOLON            # QueryDelete
-    | 'DELETAR TABELA' IDENTIFICADOR SEMICOLON                             # QueryDeleteTable
+    : 'MOSTRAR' campos ('POR' grupos)? 'DE' IDENTIFICADOR ('ONDE' condicoes)? SEMICOLON
+    | 'INSERIR EM' IDENTIFICADOR ('(' colunas ')')? 'VALORES' '(' valores ')' SEMICOLON 
+    | 'REMOVER DE' IDENTIFICADOR ('ONDE' condicoes)? SEMICOLON            
+    | 'DELETAR TABELA' IDENTIFICADOR SEMICOLON         
+    | 'CRIAR TABELA' IDENTIFICADOR '(' definicoes ')' SEMICOLON                        
     ;
 
 campos: campo (',' campo)* ;
 
-campo: AGREGADOR '(' IDENTIFICADOR ')'    # CampoComAgregador
-    | IDENTIFICADOR                     # CampoSimples
+campo: AGREGADOR '(' IDENTIFICADOR ')'    
+    | IDENTIFICADOR 
     ;
+
+definicoes: definicao (',' definicao)* ;
+
+definicao: IDENTIFICADOR tipo_dado ;
 
 grupos: IDENTIFICADOR (',' IDENTIFICADOR)*;
 
@@ -29,7 +34,9 @@ operador: '=' | '<' | '>' | '<=' | '>=' | '!=' ;
 
 valor: STRING | NUMERO;
 
-AGREGADOR: 'SUM' | 'COUNT' | 'AVG' | 'MAX' | 'MIN' ;
+tipo_dado: 'INT' | 'FLOAT' | 'CHAR' | 'VARCHAR(50)' | 'TEXT' ;
+
+AGREGADOR: 'SOMA' | 'CONTAR' | 'MEDIA' | 'MAX' | 'MIN' ;
 
 IDENTIFICADOR: [a-zA-Z_][a-zA-Z_0-9]* ;
 

@@ -10,44 +10,53 @@ else:
 
 def serializedATN():
     return [
-        4,1,23,119,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
-        6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,1,0,1,0,1,0,1,1,1,1,1,1,1,1,
-        3,1,30,8,1,1,1,1,1,3,1,34,8,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,
-        1,44,8,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,1,56,8,1,1,1,
-        1,1,1,1,1,1,3,1,62,8,1,1,2,1,2,1,2,5,2,67,8,2,10,2,12,2,70,9,2,1,
-        3,1,3,1,3,1,3,1,3,3,3,77,8,3,1,4,1,4,1,4,5,4,82,8,4,10,4,12,4,85,
-        9,4,1,5,1,5,1,5,5,5,90,8,5,10,5,12,5,93,9,5,1,6,1,6,1,6,1,6,1,7,
-        1,7,1,7,5,7,102,8,7,10,7,12,7,105,9,7,1,8,1,8,1,8,5,8,110,8,8,10,
-        8,12,8,113,9,8,1,9,1,9,1,10,1,10,1,10,0,0,11,0,2,4,6,8,10,12,14,
-        16,18,20,0,2,1,0,12,17,1,0,20,21,120,0,22,1,0,0,0,2,61,1,0,0,0,4,
-        63,1,0,0,0,6,76,1,0,0,0,8,78,1,0,0,0,10,86,1,0,0,0,12,94,1,0,0,0,
-        14,98,1,0,0,0,16,106,1,0,0,0,18,114,1,0,0,0,20,116,1,0,0,0,22,23,
-        3,2,1,0,23,24,5,0,0,1,24,1,1,0,0,0,25,26,5,1,0,0,26,29,3,4,2,0,27,
-        28,5,2,0,0,28,30,3,8,4,0,29,27,1,0,0,0,29,30,1,0,0,0,30,33,1,0,0,
-        0,31,32,5,3,0,0,32,34,3,10,5,0,33,31,1,0,0,0,33,34,1,0,0,0,34,35,
-        1,0,0,0,35,36,5,22,0,0,36,62,1,0,0,0,37,38,5,4,0,0,38,43,5,19,0,
-        0,39,40,5,5,0,0,40,41,3,14,7,0,41,42,5,6,0,0,42,44,1,0,0,0,43,39,
-        1,0,0,0,43,44,1,0,0,0,44,45,1,0,0,0,45,46,5,7,0,0,46,47,5,5,0,0,
-        47,48,3,16,8,0,48,49,5,6,0,0,49,50,5,22,0,0,50,62,1,0,0,0,51,52,
-        5,8,0,0,52,55,5,19,0,0,53,54,5,3,0,0,54,56,3,10,5,0,55,53,1,0,0,
-        0,55,56,1,0,0,0,56,57,1,0,0,0,57,62,5,22,0,0,58,59,5,9,0,0,59,60,
-        5,19,0,0,60,62,5,22,0,0,61,25,1,0,0,0,61,37,1,0,0,0,61,51,1,0,0,
-        0,61,58,1,0,0,0,62,3,1,0,0,0,63,68,3,6,3,0,64,65,5,10,0,0,65,67,
-        3,6,3,0,66,64,1,0,0,0,67,70,1,0,0,0,68,66,1,0,0,0,68,69,1,0,0,0,
-        69,5,1,0,0,0,70,68,1,0,0,0,71,72,5,18,0,0,72,73,5,5,0,0,73,74,5,
-        19,0,0,74,77,5,6,0,0,75,77,5,19,0,0,76,71,1,0,0,0,76,75,1,0,0,0,
-        77,7,1,0,0,0,78,83,5,19,0,0,79,80,5,10,0,0,80,82,5,19,0,0,81,79,
-        1,0,0,0,82,85,1,0,0,0,83,81,1,0,0,0,83,84,1,0,0,0,84,9,1,0,0,0,85,
-        83,1,0,0,0,86,91,3,12,6,0,87,88,5,11,0,0,88,90,3,12,6,0,89,87,1,
-        0,0,0,90,93,1,0,0,0,91,89,1,0,0,0,91,92,1,0,0,0,92,11,1,0,0,0,93,
-        91,1,0,0,0,94,95,5,19,0,0,95,96,3,18,9,0,96,97,3,20,10,0,97,13,1,
-        0,0,0,98,103,5,19,0,0,99,100,5,10,0,0,100,102,5,19,0,0,101,99,1,
-        0,0,0,102,105,1,0,0,0,103,101,1,0,0,0,103,104,1,0,0,0,104,15,1,0,
-        0,0,105,103,1,0,0,0,106,111,3,20,10,0,107,108,5,10,0,0,108,110,3,
-        20,10,0,109,107,1,0,0,0,110,113,1,0,0,0,111,109,1,0,0,0,111,112,
-        1,0,0,0,112,17,1,0,0,0,113,111,1,0,0,0,114,115,7,0,0,0,115,19,1,
-        0,0,0,116,117,7,1,0,0,117,21,1,0,0,0,11,29,33,43,55,61,68,76,83,
-        91,103,111
+        4,1,30,147,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
+        1,0,1,0,1,0,1,1,1,1,1,1,1,1,3,1,36,8,1,1,1,1,1,1,1,1,1,3,1,42,8,
+        1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,1,52,8,1,1,1,1,1,1,1,1,1,1,1,
+        1,1,1,1,1,1,1,1,1,1,3,1,64,8,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+        1,1,1,1,1,3,1,77,8,1,1,2,1,2,1,2,5,2,82,8,2,10,2,12,2,85,9,2,1,3,
+        1,3,1,3,1,3,1,3,3,3,92,8,3,1,4,1,4,1,4,5,4,97,8,4,10,4,12,4,100,
+        9,4,1,5,1,5,1,5,1,6,1,6,1,6,5,6,108,8,6,10,6,12,6,111,9,6,1,7,1,
+        7,1,7,5,7,116,8,7,10,7,12,7,119,9,7,1,8,1,8,1,8,1,8,1,9,1,9,1,9,
+        5,9,128,8,9,10,9,12,9,131,9,9,1,10,1,10,1,10,5,10,136,8,10,10,10,
+        12,10,139,9,10,1,11,1,11,1,12,1,12,1,13,1,13,1,13,0,0,14,0,2,4,6,
+        8,10,12,14,16,18,20,22,24,26,0,3,1,0,14,19,1,0,27,28,1,0,20,24,147,
+        0,28,1,0,0,0,2,76,1,0,0,0,4,78,1,0,0,0,6,91,1,0,0,0,8,93,1,0,0,0,
+        10,101,1,0,0,0,12,104,1,0,0,0,14,112,1,0,0,0,16,120,1,0,0,0,18,124,
+        1,0,0,0,20,132,1,0,0,0,22,140,1,0,0,0,24,142,1,0,0,0,26,144,1,0,
+        0,0,28,29,3,2,1,0,29,30,5,0,0,1,30,1,1,0,0,0,31,32,5,1,0,0,32,35,
+        3,4,2,0,33,34,5,2,0,0,34,36,3,12,6,0,35,33,1,0,0,0,35,36,1,0,0,0,
+        36,37,1,0,0,0,37,38,5,3,0,0,38,41,5,26,0,0,39,40,5,4,0,0,40,42,3,
+        14,7,0,41,39,1,0,0,0,41,42,1,0,0,0,42,43,1,0,0,0,43,44,5,29,0,0,
+        44,77,1,0,0,0,45,46,5,5,0,0,46,51,5,26,0,0,47,48,5,6,0,0,48,49,3,
+        18,9,0,49,50,5,7,0,0,50,52,1,0,0,0,51,47,1,0,0,0,51,52,1,0,0,0,52,
+        53,1,0,0,0,53,54,5,8,0,0,54,55,5,6,0,0,55,56,3,20,10,0,56,57,5,7,
+        0,0,57,58,5,29,0,0,58,77,1,0,0,0,59,60,5,9,0,0,60,63,5,26,0,0,61,
+        62,5,4,0,0,62,64,3,14,7,0,63,61,1,0,0,0,63,64,1,0,0,0,64,65,1,0,
+        0,0,65,77,5,29,0,0,66,67,5,10,0,0,67,68,5,26,0,0,68,77,5,29,0,0,
+        69,70,5,11,0,0,70,71,5,26,0,0,71,72,5,6,0,0,72,73,3,8,4,0,73,74,
+        5,7,0,0,74,75,5,29,0,0,75,77,1,0,0,0,76,31,1,0,0,0,76,45,1,0,0,0,
+        76,59,1,0,0,0,76,66,1,0,0,0,76,69,1,0,0,0,77,3,1,0,0,0,78,83,3,6,
+        3,0,79,80,5,12,0,0,80,82,3,6,3,0,81,79,1,0,0,0,82,85,1,0,0,0,83,
+        81,1,0,0,0,83,84,1,0,0,0,84,5,1,0,0,0,85,83,1,0,0,0,86,87,5,25,0,
+        0,87,88,5,6,0,0,88,89,5,26,0,0,89,92,5,7,0,0,90,92,5,26,0,0,91,86,
+        1,0,0,0,91,90,1,0,0,0,92,7,1,0,0,0,93,98,3,10,5,0,94,95,5,12,0,0,
+        95,97,3,10,5,0,96,94,1,0,0,0,97,100,1,0,0,0,98,96,1,0,0,0,98,99,
+        1,0,0,0,99,9,1,0,0,0,100,98,1,0,0,0,101,102,5,26,0,0,102,103,3,26,
+        13,0,103,11,1,0,0,0,104,109,5,26,0,0,105,106,5,12,0,0,106,108,5,
+        26,0,0,107,105,1,0,0,0,108,111,1,0,0,0,109,107,1,0,0,0,109,110,1,
+        0,0,0,110,13,1,0,0,0,111,109,1,0,0,0,112,117,3,16,8,0,113,114,5,
+        13,0,0,114,116,3,16,8,0,115,113,1,0,0,0,116,119,1,0,0,0,117,115,
+        1,0,0,0,117,118,1,0,0,0,118,15,1,0,0,0,119,117,1,0,0,0,120,121,5,
+        26,0,0,121,122,3,22,11,0,122,123,3,24,12,0,123,17,1,0,0,0,124,129,
+        5,26,0,0,125,126,5,12,0,0,126,128,5,26,0,0,127,125,1,0,0,0,128,131,
+        1,0,0,0,129,127,1,0,0,0,129,130,1,0,0,0,130,19,1,0,0,0,131,129,1,
+        0,0,0,132,137,3,24,12,0,133,134,5,12,0,0,134,136,3,24,12,0,135,133,
+        1,0,0,0,136,139,1,0,0,0,137,135,1,0,0,0,137,138,1,0,0,0,138,21,1,
+        0,0,0,139,137,1,0,0,0,140,141,7,0,0,0,141,23,1,0,0,0,142,143,7,1,
+        0,0,143,25,1,0,0,0,144,145,7,2,0,0,145,27,1,0,0,0,12,35,41,51,63,
+        76,83,91,98,109,117,129,137
     ]
 
 class EasySQLParser ( Parser ):
@@ -60,33 +69,40 @@ class EasySQLParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'MOSTRAR'", "'POR'", "'ONDE'", "'INSERIR EM'", 
-                     "'('", "')'", "'VALORES'", "'REMOVER DE'", "'DELETAR TABELA'", 
-                     "','", "'E'", "'='", "'<'", "'>'", "'<='", "'>='", 
-                     "'!='", "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "';'" ]
+    literalNames = [ "<INVALID>", "'MOSTRAR'", "'POR'", "'DE'", "'ONDE'", 
+                     "'INSERIR EM'", "'('", "')'", "'VALORES'", "'REMOVER DE'", 
+                     "'DELETAR TABELA'", "'CRIAR TABELA'", "','", "'E'", 
+                     "'='", "'<'", "'>'", "'<='", "'>='", "'!='", "'INT'", 
+                     "'FLOAT'", "'CHAR'", "'VARCHAR(50)'", "'TEXT'", "<INVALID>", 
+                     "<INVALID>", "<INVALID>", "<INVALID>", "';'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "AGREGADOR", "IDENTIFICADOR", 
-                      "NUMERO", "STRING", "SEMICOLON", "WS" ]
+                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                      "<INVALID>", "AGREGADOR", "IDENTIFICADOR", "NUMERO", 
+                      "STRING", "SEMICOLON", "WS" ]
 
     RULE_prog = 0
     RULE_query = 1
     RULE_campos = 2
     RULE_campo = 3
-    RULE_grupos = 4
-    RULE_condicoes = 5
-    RULE_condicao = 6
-    RULE_colunas = 7
-    RULE_valores = 8
-    RULE_operador = 9
-    RULE_valor = 10
+    RULE_definicoes = 4
+    RULE_definicao = 5
+    RULE_grupos = 6
+    RULE_condicoes = 7
+    RULE_condicao = 8
+    RULE_colunas = 9
+    RULE_valores = 10
+    RULE_operador = 11
+    RULE_valor = 12
+    RULE_tipo_dado = 13
 
-    ruleNames =  [ "prog", "query", "campos", "campo", "grupos", "condicoes", 
-                   "condicao", "colunas", "valores", "operador", "valor" ]
+    ruleNames =  [ "prog", "query", "campos", "campo", "definicoes", "definicao", 
+                   "grupos", "condicoes", "condicao", "colunas", "valores", 
+                   "operador", "valor", "tipo_dado" ]
 
     EOF = Token.EOF
     T__0=1
@@ -106,12 +122,19 @@ class EasySQLParser ( Parser ):
     T__14=15
     T__15=16
     T__16=17
-    AGREGADOR=18
-    IDENTIFICADOR=19
-    NUMERO=20
-    STRING=21
-    SEMICOLON=22
-    WS=23
+    T__17=18
+    T__18=19
+    T__19=20
+    T__20=21
+    T__21=22
+    T__22=23
+    T__23=24
+    AGREGADOR=25
+    IDENTIFICADOR=26
+    NUMERO=27
+    STRING=28
+    SEMICOLON=29
+    WS=30
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -156,9 +179,9 @@ class EasySQLParser ( Parser ):
         self.enterRule(localctx, 0, self.RULE_prog)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 22
+            self.state = 28
             self.query()
-            self.state = 23
+            self.state = 29
             self.match(EasySQLParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
@@ -176,110 +199,47 @@ class EasySQLParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
+        def campos(self):
+            return self.getTypedRuleContext(EasySQLParser.CamposContext,0)
 
-        def getRuleIndex(self):
-            return EasySQLParser.RULE_query
-
-     
-        def copyFrom(self, ctx:ParserRuleContext):
-            super().copyFrom(ctx)
-
-
-
-    class QueryDeleteContext(QueryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a EasySQLParser.QueryContext
-            super().__init__(parser)
-            self.copyFrom(ctx)
 
         def IDENTIFICADOR(self):
             return self.getToken(EasySQLParser.IDENTIFICADOR, 0)
+
         def SEMICOLON(self):
             return self.getToken(EasySQLParser.SEMICOLON, 0)
+
+        def grupos(self):
+            return self.getTypedRuleContext(EasySQLParser.GruposContext,0)
+
+
         def condicoes(self):
             return self.getTypedRuleContext(EasySQLParser.CondicoesContext,0)
 
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQueryDelete" ):
-                listener.enterQueryDelete(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQueryDelete" ):
-                listener.exitQueryDelete(self)
-
-
-    class QueryInsertContext(QueryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a EasySQLParser.QueryContext
-            super().__init__(parser)
-            self.copyFrom(ctx)
-
-        def IDENTIFICADOR(self):
-            return self.getToken(EasySQLParser.IDENTIFICADOR, 0)
         def valores(self):
             return self.getTypedRuleContext(EasySQLParser.ValoresContext,0)
 
-        def SEMICOLON(self):
-            return self.getToken(EasySQLParser.SEMICOLON, 0)
+
         def colunas(self):
             return self.getTypedRuleContext(EasySQLParser.ColunasContext,0)
 
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQueryInsert" ):
-                listener.enterQueryInsert(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQueryInsert" ):
-                listener.exitQueryInsert(self)
+        def definicoes(self):
+            return self.getTypedRuleContext(EasySQLParser.DefinicoesContext,0)
 
 
-    class QueryDeleteTableContext(QueryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a EasySQLParser.QueryContext
-            super().__init__(parser)
-            self.copyFrom(ctx)
-
-        def IDENTIFICADOR(self):
-            return self.getToken(EasySQLParser.IDENTIFICADOR, 0)
-        def SEMICOLON(self):
-            return self.getToken(EasySQLParser.SEMICOLON, 0)
+        def getRuleIndex(self):
+            return EasySQLParser.RULE_query
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQueryDeleteTable" ):
-                listener.enterQueryDeleteTable(self)
+            if hasattr( listener, "enterQuery" ):
+                listener.enterQuery(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQueryDeleteTable" ):
-                listener.exitQueryDeleteTable(self)
+            if hasattr( listener, "exitQuery" ):
+                listener.exitQuery(self)
 
-
-    class QuerySelectContext(QueryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a EasySQLParser.QueryContext
-            super().__init__(parser)
-            self.copyFrom(ctx)
-
-        def campos(self):
-            return self.getTypedRuleContext(EasySQLParser.CamposContext,0)
-
-        def SEMICOLON(self):
-            return self.getToken(EasySQLParser.SEMICOLON, 0)
-        def grupos(self):
-            return self.getTypedRuleContext(EasySQLParser.GruposContext,0)
-
-        def condicoes(self):
-            return self.getTypedRuleContext(EasySQLParser.CondicoesContext,0)
-
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQuerySelect" ):
-                listener.enterQuerySelect(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQuerySelect" ):
-                listener.exitQuerySelect(self)
 
 
 
@@ -289,97 +249,112 @@ class EasySQLParser ( Parser ):
         self.enterRule(localctx, 2, self.RULE_query)
         self._la = 0 # Token type
         try:
-            self.state = 61
+            self.state = 76
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [1]:
-                localctx = EasySQLParser.QuerySelectContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 25
+                self.state = 31
                 self.match(EasySQLParser.T__0)
-                self.state = 26
+                self.state = 32
                 self.campos()
-                self.state = 29
+                self.state = 35
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==2:
-                    self.state = 27
+                    self.state = 33
                     self.match(EasySQLParser.T__1)
-                    self.state = 28
+                    self.state = 34
                     self.grupos()
 
 
-                self.state = 33
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                if _la==3:
-                    self.state = 31
-                    self.match(EasySQLParser.T__2)
-                    self.state = 32
-                    self.condicoes()
-
-
-                self.state = 35
-                self.match(EasySQLParser.SEMICOLON)
-                pass
-            elif token in [4]:
-                localctx = EasySQLParser.QueryInsertContext(self, localctx)
-                self.enterOuterAlt(localctx, 2)
                 self.state = 37
-                self.match(EasySQLParser.T__3)
+                self.match(EasySQLParser.T__2)
                 self.state = 38
                 self.match(EasySQLParser.IDENTIFICADOR)
-                self.state = 43
+                self.state = 41
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==5:
+                if _la==4:
                     self.state = 39
-                    self.match(EasySQLParser.T__4)
+                    self.match(EasySQLParser.T__3)
                     self.state = 40
-                    self.colunas()
-                    self.state = 41
-                    self.match(EasySQLParser.T__5)
-
-
-                self.state = 45
-                self.match(EasySQLParser.T__6)
-                self.state = 46
-                self.match(EasySQLParser.T__4)
-                self.state = 47
-                self.valores()
-                self.state = 48
-                self.match(EasySQLParser.T__5)
-                self.state = 49
-                self.match(EasySQLParser.SEMICOLON)
-                pass
-            elif token in [8]:
-                localctx = EasySQLParser.QueryDeleteContext(self, localctx)
-                self.enterOuterAlt(localctx, 3)
-                self.state = 51
-                self.match(EasySQLParser.T__7)
-                self.state = 52
-                self.match(EasySQLParser.IDENTIFICADOR)
-                self.state = 55
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                if _la==3:
-                    self.state = 53
-                    self.match(EasySQLParser.T__2)
-                    self.state = 54
                     self.condicoes()
 
 
+                self.state = 43
+                self.match(EasySQLParser.SEMICOLON)
+                pass
+            elif token in [5]:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 45
+                self.match(EasySQLParser.T__4)
+                self.state = 46
+                self.match(EasySQLParser.IDENTIFICADOR)
+                self.state = 51
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==6:
+                    self.state = 47
+                    self.match(EasySQLParser.T__5)
+                    self.state = 48
+                    self.colunas()
+                    self.state = 49
+                    self.match(EasySQLParser.T__6)
+
+
+                self.state = 53
+                self.match(EasySQLParser.T__7)
+                self.state = 54
+                self.match(EasySQLParser.T__5)
+                self.state = 55
+                self.valores()
+                self.state = 56
+                self.match(EasySQLParser.T__6)
                 self.state = 57
                 self.match(EasySQLParser.SEMICOLON)
                 pass
             elif token in [9]:
-                localctx = EasySQLParser.QueryDeleteTableContext(self, localctx)
-                self.enterOuterAlt(localctx, 4)
-                self.state = 58
-                self.match(EasySQLParser.T__8)
+                self.enterOuterAlt(localctx, 3)
                 self.state = 59
-                self.match(EasySQLParser.IDENTIFICADOR)
+                self.match(EasySQLParser.T__8)
                 self.state = 60
+                self.match(EasySQLParser.IDENTIFICADOR)
+                self.state = 63
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==4:
+                    self.state = 61
+                    self.match(EasySQLParser.T__3)
+                    self.state = 62
+                    self.condicoes()
+
+
+                self.state = 65
+                self.match(EasySQLParser.SEMICOLON)
+                pass
+            elif token in [10]:
+                self.enterOuterAlt(localctx, 4)
+                self.state = 66
+                self.match(EasySQLParser.T__9)
+                self.state = 67
+                self.match(EasySQLParser.IDENTIFICADOR)
+                self.state = 68
+                self.match(EasySQLParser.SEMICOLON)
+                pass
+            elif token in [11]:
+                self.enterOuterAlt(localctx, 5)
+                self.state = 69
+                self.match(EasySQLParser.T__10)
+                self.state = 70
+                self.match(EasySQLParser.IDENTIFICADOR)
+                self.state = 71
+                self.match(EasySQLParser.T__5)
+                self.state = 72
+                self.definicoes()
+                self.state = 73
+                self.match(EasySQLParser.T__6)
+                self.state = 74
                 self.match(EasySQLParser.SEMICOLON)
                 pass
             else:
@@ -429,17 +404,17 @@ class EasySQLParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 63
+            self.state = 78
             self.campo()
-            self.state = 68
+            self.state = 83
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==10:
-                self.state = 64
-                self.match(EasySQLParser.T__9)
-                self.state = 65
+            while _la==12:
+                self.state = 79
+                self.match(EasySQLParser.T__11)
+                self.state = 80
                 self.campo()
-                self.state = 70
+                self.state = 85
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -459,52 +434,23 @@ class EasySQLParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
+        def AGREGADOR(self):
+            return self.getToken(EasySQLParser.AGREGADOR, 0)
+
+        def IDENTIFICADOR(self):
+            return self.getToken(EasySQLParser.IDENTIFICADOR, 0)
 
         def getRuleIndex(self):
             return EasySQLParser.RULE_campo
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
-            super().copyFrom(ctx)
-
-
-
-    class CampoSimplesContext(CampoContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a EasySQLParser.CampoContext
-            super().__init__(parser)
-            self.copyFrom(ctx)
-
-        def IDENTIFICADOR(self):
-            return self.getToken(EasySQLParser.IDENTIFICADOR, 0)
-
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCampoSimples" ):
-                listener.enterCampoSimples(self)
+            if hasattr( listener, "enterCampo" ):
+                listener.enterCampo(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCampoSimples" ):
-                listener.exitCampoSimples(self)
+            if hasattr( listener, "exitCampo" ):
+                listener.exitCampo(self)
 
-
-    class CampoComAgregadorContext(CampoContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a EasySQLParser.CampoContext
-            super().__init__(parser)
-            self.copyFrom(ctx)
-
-        def AGREGADOR(self):
-            return self.getToken(EasySQLParser.AGREGADOR, 0)
-        def IDENTIFICADOR(self):
-            return self.getToken(EasySQLParser.IDENTIFICADOR, 0)
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCampoComAgregador" ):
-                listener.enterCampoComAgregador(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCampoComAgregador" ):
-                listener.exitCampoComAgregador(self)
 
 
 
@@ -513,30 +459,133 @@ class EasySQLParser ( Parser ):
         localctx = EasySQLParser.CampoContext(self, self._ctx, self.state)
         self.enterRule(localctx, 6, self.RULE_campo)
         try:
-            self.state = 76
+            self.state = 91
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [18]:
-                localctx = EasySQLParser.CampoComAgregadorContext(self, localctx)
+            if token in [25]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 71
+                self.state = 86
                 self.match(EasySQLParser.AGREGADOR)
-                self.state = 72
-                self.match(EasySQLParser.T__4)
-                self.state = 73
-                self.match(EasySQLParser.IDENTIFICADOR)
-                self.state = 74
+                self.state = 87
                 self.match(EasySQLParser.T__5)
+                self.state = 88
+                self.match(EasySQLParser.IDENTIFICADOR)
+                self.state = 89
+                self.match(EasySQLParser.T__6)
                 pass
-            elif token in [19]:
-                localctx = EasySQLParser.CampoSimplesContext(self, localctx)
+            elif token in [26]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 75
+                self.state = 90
                 self.match(EasySQLParser.IDENTIFICADOR)
                 pass
             else:
                 raise NoViableAltException(self)
 
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class DefinicoesContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def definicao(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(EasySQLParser.DefinicaoContext)
+            else:
+                return self.getTypedRuleContext(EasySQLParser.DefinicaoContext,i)
+
+
+        def getRuleIndex(self):
+            return EasySQLParser.RULE_definicoes
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterDefinicoes" ):
+                listener.enterDefinicoes(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitDefinicoes" ):
+                listener.exitDefinicoes(self)
+
+
+
+
+    def definicoes(self):
+
+        localctx = EasySQLParser.DefinicoesContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 8, self.RULE_definicoes)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 93
+            self.definicao()
+            self.state = 98
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while _la==12:
+                self.state = 94
+                self.match(EasySQLParser.T__11)
+                self.state = 95
+                self.definicao()
+                self.state = 100
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class DefinicaoContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def IDENTIFICADOR(self):
+            return self.getToken(EasySQLParser.IDENTIFICADOR, 0)
+
+        def tipo_dado(self):
+            return self.getTypedRuleContext(EasySQLParser.Tipo_dadoContext,0)
+
+
+        def getRuleIndex(self):
+            return EasySQLParser.RULE_definicao
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterDefinicao" ):
+                listener.enterDefinicao(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitDefinicao" ):
+                listener.exitDefinicao(self)
+
+
+
+
+    def definicao(self):
+
+        localctx = EasySQLParser.DefinicaoContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 10, self.RULE_definicao)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 101
+            self.match(EasySQLParser.IDENTIFICADOR)
+            self.state = 102
+            self.tipo_dado()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -576,21 +625,21 @@ class EasySQLParser ( Parser ):
     def grupos(self):
 
         localctx = EasySQLParser.GruposContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 8, self.RULE_grupos)
+        self.enterRule(localctx, 12, self.RULE_grupos)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 78
+            self.state = 104
             self.match(EasySQLParser.IDENTIFICADOR)
-            self.state = 83
+            self.state = 109
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==10:
-                self.state = 79
-                self.match(EasySQLParser.T__9)
-                self.state = 80
+            while _la==12:
+                self.state = 105
+                self.match(EasySQLParser.T__11)
+                self.state = 106
                 self.match(EasySQLParser.IDENTIFICADOR)
-                self.state = 85
+                self.state = 111
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -634,21 +683,21 @@ class EasySQLParser ( Parser ):
     def condicoes(self):
 
         localctx = EasySQLParser.CondicoesContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 10, self.RULE_condicoes)
+        self.enterRule(localctx, 14, self.RULE_condicoes)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 86
+            self.state = 112
             self.condicao()
-            self.state = 91
+            self.state = 117
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==11:
-                self.state = 87
-                self.match(EasySQLParser.T__10)
-                self.state = 88
+            while _la==13:
+                self.state = 113
+                self.match(EasySQLParser.T__12)
+                self.state = 114
                 self.condicao()
-                self.state = 93
+                self.state = 119
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -696,14 +745,14 @@ class EasySQLParser ( Parser ):
     def condicao(self):
 
         localctx = EasySQLParser.CondicaoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 12, self.RULE_condicao)
+        self.enterRule(localctx, 16, self.RULE_condicao)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 94
+            self.state = 120
             self.match(EasySQLParser.IDENTIFICADOR)
-            self.state = 95
+            self.state = 121
             self.operador()
-            self.state = 96
+            self.state = 122
             self.valor()
         except RecognitionException as re:
             localctx.exception = re
@@ -744,21 +793,21 @@ class EasySQLParser ( Parser ):
     def colunas(self):
 
         localctx = EasySQLParser.ColunasContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 14, self.RULE_colunas)
+        self.enterRule(localctx, 18, self.RULE_colunas)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 98
+            self.state = 124
             self.match(EasySQLParser.IDENTIFICADOR)
-            self.state = 103
+            self.state = 129
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==10:
-                self.state = 99
-                self.match(EasySQLParser.T__9)
-                self.state = 100
+            while _la==12:
+                self.state = 125
+                self.match(EasySQLParser.T__11)
+                self.state = 126
                 self.match(EasySQLParser.IDENTIFICADOR)
-                self.state = 105
+                self.state = 131
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -802,21 +851,21 @@ class EasySQLParser ( Parser ):
     def valores(self):
 
         localctx = EasySQLParser.ValoresContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 16, self.RULE_valores)
+        self.enterRule(localctx, 20, self.RULE_valores)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 106
+            self.state = 132
             self.valor()
-            self.state = 111
+            self.state = 137
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==10:
-                self.state = 107
-                self.match(EasySQLParser.T__9)
-                self.state = 108
+            while _la==12:
+                self.state = 133
+                self.match(EasySQLParser.T__11)
+                self.state = 134
                 self.valor()
-                self.state = 113
+                self.state = 139
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -854,13 +903,13 @@ class EasySQLParser ( Parser ):
     def operador(self):
 
         localctx = EasySQLParser.OperadorContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 18, self.RULE_operador)
+        self.enterRule(localctx, 22, self.RULE_operador)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 114
+            self.state = 140
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 258048) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 1032192) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -904,13 +953,58 @@ class EasySQLParser ( Parser ):
     def valor(self):
 
         localctx = EasySQLParser.ValorContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 20, self.RULE_valor)
+        self.enterRule(localctx, 24, self.RULE_valor)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 116
+            self.state = 142
             _la = self._input.LA(1)
-            if not(_la==20 or _la==21):
+            if not(_la==27 or _la==28):
+                self._errHandler.recoverInline(self)
+            else:
+                self._errHandler.reportMatch(self)
+                self.consume()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Tipo_dadoContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+
+        def getRuleIndex(self):
+            return EasySQLParser.RULE_tipo_dado
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTipo_dado" ):
+                listener.enterTipo_dado(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTipo_dado" ):
+                listener.exitTipo_dado(self)
+
+
+
+
+    def tipo_dado(self):
+
+        localctx = EasySQLParser.Tipo_dadoContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 26, self.RULE_tipo_dado)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 144
+            _la = self._input.LA(1)
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 32505856) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
