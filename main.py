@@ -71,6 +71,7 @@ def analize_condicoes(condicoes):
     return condicoes_text
 
 def analize_colunas(colunas):
+    
     colunas_text = ""
     numero_colunas = 0
     for coluna in colunas.IDENTIFICADOR():
@@ -100,7 +101,32 @@ def analize_definicoes(definicoes):
     
     return definicoes_text
 
-input_text = input("Digite a consulta: ")
+def analize_atualizacoes(atualizacoes):
+    atualizacoes_text = ""
+    numero_atualizacoes = 0
+     
+    for atualizacao in atualizacoes.IDENTIFICADOR():
+       
+        valor = atualizacoes.valor()[numero_atualizacoes].getText()  # Valor relacionado ao campo
+        
+        if numero_atualizacoes > 0: 
+            atualizacoes_text += ', '
+        atualizacoes_text += f'{atualizacao.getText()} = {valor}'
+        numero_atualizacoes += 1
+    
+    return atualizacoes_text
+
+    atualizacoes_text = ""
+    numero_atualizacoes = 0
+    for atualizacao in atualizacoes:
+        if numero_atualizacoes > 0: atualizacoes_text += ', '
+        atualizacoes_text += f'{atualizacao.IDENTIFICADOR().getText()} = {atualizacao.valor().getText()}'
+        numero_atualizacoes += 1
+    
+    return atualizacoes_text
+
+
+input_text = input("Digite a consulta:")
 
 input_stream = InputStream(input_text)
 lexer = EasySQLLexer(input_stream)
@@ -142,10 +168,22 @@ elif "CRIAR" in query.getText():
 
     definicoes_text = analize_definicoes(query.definicoes())
     sql_command += f'({definicoes_text});'
+elif "ATUALIZAR" in query.getText(): 
+    sql_command = f'UPDATE {query.IDENTIFICADOR().getText()} SET '
+
+    atualizacoes_text = analize_atualizacoes(query.atualizacoes())
+    sql_command += atualizacoes_text
+
+    if query.condicoes():
+        condicoes_text = analize_condicoes(query.condicoes())
+        sql_command += f' WHERE {condicoes_text}'
+
+    sql_command += ';'
 else:
     raise ValueError("Comando Inválido")
 
 print(sql_command)
+
 print(executar_sql(sql_command))
 
 '''

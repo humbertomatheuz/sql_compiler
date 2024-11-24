@@ -53,6 +53,15 @@ class EasySQLListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by EasySQLParser#atualizacoes.
+    def enterAtualizacoes(self, ctx:EasySQLParser.AtualizacoesContext):
+        pass
+
+    # Exit a parse tree produced by EasySQLParser#atualizacoes.
+    def exitAtualizacoes(self, ctx:EasySQLParser.AtualizacoesContext):
+        pass
+
+
     # Enter a parse tree produced by EasySQLParser#definicao.
     def enterDefinicao(self, ctx:EasySQLParser.DefinicaoContext):
         pass

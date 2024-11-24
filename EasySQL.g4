@@ -7,7 +7,8 @@ query
     | 'INSERIR EM' IDENTIFICADOR ('(' colunas ')')? 'VALORES' '(' valores ')' SEMICOLON 
     | 'REMOVER DE' IDENTIFICADOR ('ONDE' condicoes)? SEMICOLON            
     | 'DELETAR TABELA' IDENTIFICADOR SEMICOLON         
-    | 'CRIAR TABELA' IDENTIFICADOR '(' definicoes ')' SEMICOLON                        
+    | 'CRIAR TABELA' IDENTIFICADOR '(' definicoes ')' SEMICOLON 
+    | 'ATUALIZAR' IDENTIFICADOR 'DEFINIR' atualizacoes ('ONDE' condicoes)? SEMICOLON                       
     ;
 
 campos: campo (',' campo)* ;
@@ -17,6 +18,8 @@ campo: AGREGADOR '(' IDENTIFICADOR ')'
     ;
 
 definicoes: definicao (',' definicao)* ;
+
+atualizacoes: IDENTIFICADOR '=' valor ( ',' IDENTIFICADOR '=' valor)* ;
 
 definicao: IDENTIFICADOR tipo_dado ;
 
@@ -34,7 +37,7 @@ operador: '=' | '<' | '>' | '<=' | '>=' | '!=' ;
 
 valor: STRING | NUMERO;
 
-tipo_dado: 'INT' | 'FLOAT' | 'CHAR' | 'VARCHAR(50)' | 'TEXT' ;
+tipo_dado: 'INT' | 'FLOAT' | 'CHAR' | 'VARCHAR' '(' NUMERO ')' | 'TEXT' ;
 
 AGREGADOR: 'SOMA' | 'CONTAR' | 'MEDIA' | 'MAX' | 'MIN' ;
 
