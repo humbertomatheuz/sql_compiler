@@ -1,5 +1,6 @@
 import sqlite3
 import sys
+import os
 from antlr4 import *
 from EasySQLLexer import EasySQLLexer
 from EasySQLParser import EasySQLParser
@@ -8,6 +9,9 @@ from EasySQLListener import EasySQLListener
 DB_FILE = "database.db"
 
 def executar_sql(comando_sql):
+    if not os.path.exists(DB_FILE):
+        with sqlite3.connect(DB_FILE) as conn:
+            print(f"Banco de dados '{DB_FILE}' criado com sucesso.")
     try:
         with sqlite3.connect(DB_FILE) as conn:
             cursor = conn.cursor()
@@ -125,87 +129,69 @@ def analize_atualizacoes(atualizacoes):
     
     return atualizacoes_text
 
+def translate_command(query):
+    sql_command = ""
 
-input_text = input("Digite a consulta:")
+    if "MOSTRAR" in query.getText():
+        campos_text = analize_campos(query.campos())
+        if query.grupos():
+            grupos_text = analize_grupos(query.grupos())
 
-input_stream = InputStream(input_text)
-lexer = EasySQLLexer(input_stream)
-stream = CommonTokenStream(lexer)
-parser = EasySQLParser(stream)
-query = parser.prog().query()
-sql_command = ""
+        sql_command += f'SELECT {campos_text} FROM {query.IDENTIFICADOR().getText()}'
+        if query.condicoes():
+            condicoes_text = analize_condicoes(query.condicoes())
+            sql_command += f' WHERE {condicoes_text};'
+    elif "INSERIR" in query.getText():
+        identificador_text = query.IDENTIFICADOR().getText()
+        sql_command += f'INSERT INTO {identificador_text} '
 
-if "MOSTRAR" in query.getText():
-    campos_text = analize_campos(query.campos())
-    if query.grupos():
-        grupos_text = analize_grupos(query.grupos())
+        if query.colunas():
+            colunas_text = analize_colunas(query.colunas())
+            sql_command += f' ({colunas_text}) '
 
-    sql_command += f'SELECT {campos_text} FROM {query.IDENTIFICADOR().getText()}'
-    if query.condicoes():
-        condicoes_text = analize_condicoes(query.condicoes())
-        sql_command += f' WHERE {condicoes_text};'
-elif "INSERIR" in query.getText():
-    identificador_text = query.IDENTIFICADOR().getText()
-    sql_command += f'INSERT INTO {identificador_text} '
+        valores_text = analize_valores(query.valores())
+        sql_command += f'VALUES ({valores_text});'
+    elif "REMOVER" in query.getText():
+        sql_command = f'DELETE FROM {query.IDENTIFICADOR().getText()}'
 
-    if query.colunas():
-        colunas_text = analize_colunas(query.colunas())
-        sql_command += f' ({colunas_text}) '
+        if query.condicoes():
+            condicoes_text = analize_condicoes(query.condicoes())
+            sql_command += f' WHERE {condicoes_text}'
 
-    valores_text = analize_valores(query.valores())
-    sql_command += f'VALUES ({valores_text});'
-elif "REMOVER" in query.getText():
-    sql_command = f'DELETE FROM {query.IDENTIFICADOR().getText()}'
+        sql_command += ';'
+    elif "DELETAR" in query.getText(): sql_command = f'DROP TABLE {query.IDENTIFICADOR().getText()};'
+    elif "CRIAR" in query.getText(): 
+        sql_command = f'CREATE TABLE {query.IDENTIFICADOR().getText()} '
 
-    if query.condicoes():
-        condicoes_text = analize_condicoes(query.condicoes())
-        sql_command += f' WHERE {condicoes_text}'
+        definicoes_text = analize_definicoes(query.definicoes())
+        sql_command += f'({definicoes_text});'
+    elif "ATUALIZAR" in query.getText(): 
+        sql_command = f'UPDATE {query.IDENTIFICADOR().getText()} SET '
 
-    sql_command += ';'
-elif "DELETAR" in query.getText(): sql_command = f'DROP TABLE {query.IDENTIFICADOR().getText()};'
-elif "CRIAR" in query.getText(): 
-    sql_command = f'CREATE TABLE {query.IDENTIFICADOR().getText()} '
+        atualizacoes_text = analize_atualizacoes(query.atualizacoes())
+        sql_command += atualizacoes_text
 
-    definicoes_text = analize_definicoes(query.definicoes())
-    sql_command += f'({definicoes_text});'
-elif "ATUALIZAR" in query.getText(): 
-    sql_command = f'UPDATE {query.IDENTIFICADOR().getText()} SET '
+        if query.condicoes():
+            condicoes_text = analize_condicoes(query.condicoes())
+            sql_command += f' WHERE {condicoes_text}'
 
-    atualizacoes_text = analize_atualizacoes(query.atualizacoes())
-    sql_command += atualizacoes_text
+        sql_command += ';'
+    else:
+        raise ValueError("Comando Inválido")
 
-    if query.condicoes():
-        condicoes_text = analize_condicoes(query.condicoes())
-        sql_command += f' WHERE {condicoes_text}'
+    return sql_command
 
-    sql_command += ';'
-else:
-    raise ValueError("Comando Inválido")
+while True:
+    input_text = input("Digite a consulta:")
+    if input_text.strip() == "":
+        break
 
-print(sql_command)
+    input_stream = InputStream(input_text)
+    lexer = EasySQLLexer(input_stream)
+    stream = CommonTokenStream(lexer)
+    parser = EasySQLParser(stream)
+    query = parser.prog().query()
+    sql_command = translate_command(query)
 
-print(executar_sql(sql_command))
-
-'''
-Exemplos de Comandos:
-
-MOSTRAR SOMA(vendas), categoria POR categoria ONDE ano >= 2020;
-
-INSERIR EM produtos VALORES ('Notebook', 3500.00, 'Eletrônicos');
-
-REMOVER DE vendas ONDE categoria = 'Tecnologia' E ano < 2020;
-
-DELETAR TABELA clientes;
-
-CRIAR TABELA produtos (id INT, nome VARCHAR, preco FLOAT);
-
--------------------------------------------------------------------
-Se quiser testar:
-
-CRIAR TABELA produtos (id INT, nome VARCHAR(50), preco FLOAT);
-INSERIR EM produtos VALORES (1, 'Notebook', 3500.00);
-MOSTRAR nome, preco POR nome;
-REMOVER DE produtos ONDE preco > 3000;
-DELETAR TABELA produtos;
-
-'''
+    print(sql_command)
+    print(executar_sql(sql_command))
