@@ -10,9 +10,9 @@ else:
 
 def serializedATN():
     return [
-        4,1,32,179,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,32,194,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
-        2,14,7,14,1,0,1,0,1,0,1,1,1,1,1,1,1,1,3,1,38,8,1,1,1,1,1,1,1,1,1,
+        2,14,7,14,1,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,3,1,40,8,1,1,1,1,1,
         3,1,44,8,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,1,54,8,1,1,1,1,1,1,
         1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,1,66,8,1,1,1,1,1,1,1,1,1,1,1,1,1,
         1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,1,85,8,1,1,1,1,1,3,
@@ -20,55 +20,61 @@ def serializedATN():
         1,3,3,3,104,8,3,1,4,1,4,1,4,5,4,109,8,4,10,4,12,4,112,9,4,1,5,1,
         5,1,5,1,5,1,5,1,5,1,5,5,5,121,8,5,10,5,12,5,124,9,5,1,6,1,6,1,6,
         1,7,1,7,1,7,5,7,132,8,7,10,7,12,7,135,9,7,1,8,1,8,1,8,5,8,140,8,
-        8,10,8,12,8,143,9,8,1,9,1,9,1,9,1,9,1,10,1,10,1,10,5,10,152,8,10,
-        10,10,12,10,155,9,10,1,11,1,11,1,11,5,11,160,8,11,10,11,12,11,163,
-        9,11,1,12,1,12,1,13,1,13,1,14,1,14,1,14,1,14,1,14,1,14,1,14,1,14,
-        3,14,177,8,14,1,14,0,0,15,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,
-        0,2,2,0,15,15,17,21,1,0,29,30,185,0,30,1,0,0,0,2,88,1,0,0,0,4,90,
-        1,0,0,0,6,103,1,0,0,0,8,105,1,0,0,0,10,113,1,0,0,0,12,125,1,0,0,
-        0,14,128,1,0,0,0,16,136,1,0,0,0,18,144,1,0,0,0,20,148,1,0,0,0,22,
-        156,1,0,0,0,24,164,1,0,0,0,26,166,1,0,0,0,28,176,1,0,0,0,30,31,3,
-        2,1,0,31,32,5,0,0,1,32,1,1,0,0,0,33,34,5,1,0,0,34,37,3,4,2,0,35,
-        36,5,2,0,0,36,38,3,14,7,0,37,35,1,0,0,0,37,38,1,0,0,0,38,39,1,0,
-        0,0,39,40,5,3,0,0,40,43,5,28,0,0,41,42,5,4,0,0,42,44,3,16,8,0,43,
-        41,1,0,0,0,43,44,1,0,0,0,44,45,1,0,0,0,45,46,5,31,0,0,46,89,1,0,
-        0,0,47,48,5,5,0,0,48,53,5,28,0,0,49,50,5,6,0,0,50,51,3,20,10,0,51,
-        52,5,7,0,0,52,54,1,0,0,0,53,49,1,0,0,0,53,54,1,0,0,0,54,55,1,0,0,
-        0,55,56,5,8,0,0,56,57,5,6,0,0,57,58,3,22,11,0,58,59,5,7,0,0,59,60,
-        5,31,0,0,60,89,1,0,0,0,61,62,5,9,0,0,62,65,5,28,0,0,63,64,5,4,0,
-        0,64,66,3,16,8,0,65,63,1,0,0,0,65,66,1,0,0,0,66,67,1,0,0,0,67,89,
-        5,31,0,0,68,69,5,10,0,0,69,70,5,28,0,0,70,89,5,31,0,0,71,72,5,11,
-        0,0,72,73,5,28,0,0,73,74,5,6,0,0,74,75,3,8,4,0,75,76,5,7,0,0,76,
-        77,5,31,0,0,77,89,1,0,0,0,78,79,5,12,0,0,79,80,5,28,0,0,80,81,5,
-        13,0,0,81,84,3,10,5,0,82,83,5,4,0,0,83,85,3,16,8,0,84,82,1,0,0,0,
-        84,85,1,0,0,0,85,86,1,0,0,0,86,87,5,31,0,0,87,89,1,0,0,0,88,33,1,
-        0,0,0,88,47,1,0,0,0,88,61,1,0,0,0,88,68,1,0,0,0,88,71,1,0,0,0,88,
-        78,1,0,0,0,89,3,1,0,0,0,90,95,3,6,3,0,91,92,5,14,0,0,92,94,3,6,3,
-        0,93,91,1,0,0,0,94,97,1,0,0,0,95,93,1,0,0,0,95,96,1,0,0,0,96,5,1,
-        0,0,0,97,95,1,0,0,0,98,99,5,27,0,0,99,100,5,6,0,0,100,101,5,28,0,
-        0,101,104,5,7,0,0,102,104,5,28,0,0,103,98,1,0,0,0,103,102,1,0,0,
-        0,104,7,1,0,0,0,105,110,3,12,6,0,106,107,5,14,0,0,107,109,3,12,6,
-        0,108,106,1,0,0,0,109,112,1,0,0,0,110,108,1,0,0,0,110,111,1,0,0,
-        0,111,9,1,0,0,0,112,110,1,0,0,0,113,114,5,28,0,0,114,115,5,15,0,
-        0,115,122,3,26,13,0,116,117,5,14,0,0,117,118,5,28,0,0,118,119,5,
-        15,0,0,119,121,3,26,13,0,120,116,1,0,0,0,121,124,1,0,0,0,122,120,
+        8,10,8,12,8,143,9,8,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,
+        3,9,156,8,9,1,10,1,10,1,10,5,10,161,8,10,10,10,12,10,164,9,10,1,
+        11,1,11,1,11,5,11,169,8,11,10,11,12,11,172,9,11,1,12,1,12,1,13,1,
+        13,1,13,1,13,1,13,1,13,3,13,182,8,13,1,14,1,14,1,14,1,14,1,14,1,
+        14,1,14,1,14,3,14,192,8,14,1,14,0,0,15,0,2,4,6,8,10,12,14,16,18,
+        20,22,24,26,28,0,1,2,0,15,15,17,21,203,0,30,1,0,0,0,2,88,1,0,0,0,
+        4,90,1,0,0,0,6,103,1,0,0,0,8,105,1,0,0,0,10,113,1,0,0,0,12,125,1,
+        0,0,0,14,128,1,0,0,0,16,136,1,0,0,0,18,155,1,0,0,0,20,157,1,0,0,
+        0,22,165,1,0,0,0,24,173,1,0,0,0,26,181,1,0,0,0,28,191,1,0,0,0,30,
+        31,3,2,1,0,31,32,5,0,0,1,32,1,1,0,0,0,33,34,5,1,0,0,34,35,3,4,2,
+        0,35,36,5,2,0,0,36,39,5,28,0,0,37,38,5,3,0,0,38,40,3,14,7,0,39,37,
+        1,0,0,0,39,40,1,0,0,0,40,43,1,0,0,0,41,42,5,4,0,0,42,44,3,16,8,0,
+        43,41,1,0,0,0,43,44,1,0,0,0,44,45,1,0,0,0,45,46,5,31,0,0,46,89,1,
+        0,0,0,47,48,5,5,0,0,48,53,5,28,0,0,49,50,5,6,0,0,50,51,3,20,10,0,
+        51,52,5,7,0,0,52,54,1,0,0,0,53,49,1,0,0,0,53,54,1,0,0,0,54,55,1,
+        0,0,0,55,56,5,8,0,0,56,57,5,6,0,0,57,58,3,22,11,0,58,59,5,7,0,0,
+        59,60,5,31,0,0,60,89,1,0,0,0,61,62,5,9,0,0,62,65,5,28,0,0,63,64,
+        5,4,0,0,64,66,3,16,8,0,65,63,1,0,0,0,65,66,1,0,0,0,66,67,1,0,0,0,
+        67,89,5,31,0,0,68,69,5,10,0,0,69,70,5,28,0,0,70,89,5,31,0,0,71,72,
+        5,11,0,0,72,73,5,28,0,0,73,74,5,6,0,0,74,75,3,8,4,0,75,76,5,7,0,
+        0,76,77,5,31,0,0,77,89,1,0,0,0,78,79,5,12,0,0,79,80,5,28,0,0,80,
+        81,5,13,0,0,81,84,3,10,5,0,82,83,5,4,0,0,83,85,3,16,8,0,84,82,1,
+        0,0,0,84,85,1,0,0,0,85,86,1,0,0,0,86,87,5,31,0,0,87,89,1,0,0,0,88,
+        33,1,0,0,0,88,47,1,0,0,0,88,61,1,0,0,0,88,68,1,0,0,0,88,71,1,0,0,
+        0,88,78,1,0,0,0,89,3,1,0,0,0,90,95,3,6,3,0,91,92,5,14,0,0,92,94,
+        3,6,3,0,93,91,1,0,0,0,94,97,1,0,0,0,95,93,1,0,0,0,95,96,1,0,0,0,
+        96,5,1,0,0,0,97,95,1,0,0,0,98,99,5,27,0,0,99,100,5,6,0,0,100,101,
+        5,28,0,0,101,104,5,7,0,0,102,104,5,28,0,0,103,98,1,0,0,0,103,102,
+        1,0,0,0,104,7,1,0,0,0,105,110,3,12,6,0,106,107,5,14,0,0,107,109,
+        3,12,6,0,108,106,1,0,0,0,109,112,1,0,0,0,110,108,1,0,0,0,110,111,
+        1,0,0,0,111,9,1,0,0,0,112,110,1,0,0,0,113,114,5,28,0,0,114,115,5,
+        15,0,0,115,122,3,26,13,0,116,117,5,14,0,0,117,118,5,28,0,0,118,119,
+        5,15,0,0,119,121,3,26,13,0,120,116,1,0,0,0,121,124,1,0,0,0,122,120,
         1,0,0,0,122,123,1,0,0,0,123,11,1,0,0,0,124,122,1,0,0,0,125,126,5,
         28,0,0,126,127,3,28,14,0,127,13,1,0,0,0,128,133,5,28,0,0,129,130,
         5,14,0,0,130,132,5,28,0,0,131,129,1,0,0,0,132,135,1,0,0,0,133,131,
         1,0,0,0,133,134,1,0,0,0,134,15,1,0,0,0,135,133,1,0,0,0,136,141,3,
         18,9,0,137,138,5,16,0,0,138,140,3,18,9,0,139,137,1,0,0,0,140,143,
         1,0,0,0,141,139,1,0,0,0,141,142,1,0,0,0,142,17,1,0,0,0,143,141,1,
-        0,0,0,144,145,5,28,0,0,145,146,3,24,12,0,146,147,3,26,13,0,147,19,
-        1,0,0,0,148,153,5,28,0,0,149,150,5,14,0,0,150,152,5,28,0,0,151,149,
-        1,0,0,0,152,155,1,0,0,0,153,151,1,0,0,0,153,154,1,0,0,0,154,21,1,
-        0,0,0,155,153,1,0,0,0,156,161,3,26,13,0,157,158,5,14,0,0,158,160,
-        3,26,13,0,159,157,1,0,0,0,160,163,1,0,0,0,161,159,1,0,0,0,161,162,
-        1,0,0,0,162,23,1,0,0,0,163,161,1,0,0,0,164,165,7,0,0,0,165,25,1,
-        0,0,0,166,167,7,1,0,0,167,27,1,0,0,0,168,177,5,22,0,0,169,177,5,
-        23,0,0,170,177,5,24,0,0,171,172,5,25,0,0,172,173,5,6,0,0,173,174,
-        5,29,0,0,174,177,5,7,0,0,175,177,5,26,0,0,176,168,1,0,0,0,176,169,
-        1,0,0,0,176,170,1,0,0,0,176,171,1,0,0,0,176,175,1,0,0,0,177,29,1,
-        0,0,0,15,37,43,53,65,84,88,95,103,110,122,133,141,153,161,176
+        0,0,0,144,145,5,28,0,0,145,146,3,24,12,0,146,147,3,26,13,0,147,156,
+        1,0,0,0,148,149,5,27,0,0,149,150,5,6,0,0,150,151,5,28,0,0,151,152,
+        5,7,0,0,152,153,3,24,12,0,153,154,3,26,13,0,154,156,1,0,0,0,155,
+        144,1,0,0,0,155,148,1,0,0,0,156,19,1,0,0,0,157,162,5,28,0,0,158,
+        159,5,14,0,0,159,161,5,28,0,0,160,158,1,0,0,0,161,164,1,0,0,0,162,
+        160,1,0,0,0,162,163,1,0,0,0,163,21,1,0,0,0,164,162,1,0,0,0,165,170,
+        3,26,13,0,166,167,5,14,0,0,167,169,3,26,13,0,168,166,1,0,0,0,169,
+        172,1,0,0,0,170,168,1,0,0,0,170,171,1,0,0,0,171,23,1,0,0,0,172,170,
+        1,0,0,0,173,174,7,0,0,0,174,25,1,0,0,0,175,182,5,30,0,0,176,182,
+        5,29,0,0,177,178,5,27,0,0,178,179,5,6,0,0,179,180,5,28,0,0,180,182,
+        5,7,0,0,181,175,1,0,0,0,181,176,1,0,0,0,181,177,1,0,0,0,182,27,1,
+        0,0,0,183,192,5,22,0,0,184,192,5,23,0,0,185,192,5,24,0,0,186,187,
+        5,25,0,0,187,188,5,6,0,0,188,189,5,29,0,0,189,192,5,7,0,0,190,192,
+        5,26,0,0,191,183,1,0,0,0,191,184,1,0,0,0,191,185,1,0,0,0,191,186,
+        1,0,0,0,191,190,1,0,0,0,192,29,1,0,0,0,17,39,43,53,65,84,88,95,103,
+        110,122,133,141,155,162,170,181,191
     ]
 
 class EasySQLParser ( Parser ):
@@ -81,7 +87,7 @@ class EasySQLParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'MOSTRAR'", "'POR'", "'DE'", "'ONDE'", 
+    literalNames = [ "<INVALID>", "'MOSTRAR'", "'DE'", "'POR'", "'ONDE'", 
                      "'INSERIR EM'", "'('", "')'", "'VALORES'", "'REMOVER DE'", 
                      "'DELETAR TABELA'", "'CRIAR TABELA'", "'ATUALIZAR'", 
                      "'DEFINIR'", "','", "'='", "'E'", "'<'", "'>'", "'<='", 
@@ -279,20 +285,20 @@ class EasySQLParser ( Parser ):
                 self.match(EasySQLParser.T__0)
                 self.state = 34
                 self.campos()
-                self.state = 37
+                self.state = 35
+                self.match(EasySQLParser.T__1)
+                self.state = 36
+                self.match(EasySQLParser.IDENTIFICADOR)
+                self.state = 39
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==2:
-                    self.state = 35
-                    self.match(EasySQLParser.T__1)
-                    self.state = 36
+                if _la==3:
+                    self.state = 37
+                    self.match(EasySQLParser.T__2)
+                    self.state = 38
                     self.grupos()
 
 
-                self.state = 39
-                self.match(EasySQLParser.T__2)
-                self.state = 40
-                self.match(EasySQLParser.IDENTIFICADOR)
                 self.state = 43
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -844,6 +850,9 @@ class EasySQLParser ( Parser ):
             return self.getTypedRuleContext(EasySQLParser.ValorContext,0)
 
 
+        def AGREGADOR(self):
+            return self.getToken(EasySQLParser.AGREGADOR, 0)
+
         def getRuleIndex(self):
             return EasySQLParser.RULE_condicao
 
@@ -863,13 +872,36 @@ class EasySQLParser ( Parser ):
         localctx = EasySQLParser.CondicaoContext(self, self._ctx, self.state)
         self.enterRule(localctx, 18, self.RULE_condicao)
         try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 144
-            self.match(EasySQLParser.IDENTIFICADOR)
-            self.state = 145
-            self.operador()
-            self.state = 146
-            self.valor()
+            self.state = 155
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [28]:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 144
+                self.match(EasySQLParser.IDENTIFICADOR)
+                self.state = 145
+                self.operador()
+                self.state = 146
+                self.valor()
+                pass
+            elif token in [27]:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 148
+                self.match(EasySQLParser.AGREGADOR)
+                self.state = 149
+                self.match(EasySQLParser.T__5)
+                self.state = 150
+                self.match(EasySQLParser.IDENTIFICADOR)
+                self.state = 151
+                self.match(EasySQLParser.T__6)
+                self.state = 152
+                self.operador()
+                self.state = 153
+                self.valor()
+                pass
+            else:
+                raise NoViableAltException(self)
+
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -913,17 +945,17 @@ class EasySQLParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 148
+            self.state = 157
             self.match(EasySQLParser.IDENTIFICADOR)
-            self.state = 153
+            self.state = 162
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==14:
-                self.state = 149
+                self.state = 158
                 self.match(EasySQLParser.T__13)
-                self.state = 150
+                self.state = 159
                 self.match(EasySQLParser.IDENTIFICADOR)
-                self.state = 155
+                self.state = 164
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -971,17 +1003,17 @@ class EasySQLParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 156
+            self.state = 165
             self.valor()
-            self.state = 161
+            self.state = 170
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==14:
-                self.state = 157
+                self.state = 166
                 self.match(EasySQLParser.T__13)
-                self.state = 158
+                self.state = 167
                 self.valor()
-                self.state = 163
+                self.state = 172
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -1023,7 +1055,7 @@ class EasySQLParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 164
+            self.state = 173
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 4096000) != 0)):
                 self._errHandler.recoverInline(self)
@@ -1052,6 +1084,12 @@ class EasySQLParser ( Parser ):
         def NUMERO(self):
             return self.getToken(EasySQLParser.NUMERO, 0)
 
+        def AGREGADOR(self):
+            return self.getToken(EasySQLParser.AGREGADOR, 0)
+
+        def IDENTIFICADOR(self):
+            return self.getToken(EasySQLParser.IDENTIFICADOR, 0)
+
         def getRuleIndex(self):
             return EasySQLParser.RULE_valor
 
@@ -1070,16 +1108,34 @@ class EasySQLParser ( Parser ):
 
         localctx = EasySQLParser.ValorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 26, self.RULE_valor)
-        self._la = 0 # Token type
         try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 166
-            _la = self._input.LA(1)
-            if not(_la==29 or _la==30):
-                self._errHandler.recoverInline(self)
+            self.state = 181
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [30]:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 175
+                self.match(EasySQLParser.STRING)
+                pass
+            elif token in [29]:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 176
+                self.match(EasySQLParser.NUMERO)
+                pass
+            elif token in [27]:
+                self.enterOuterAlt(localctx, 3)
+                self.state = 177
+                self.match(EasySQLParser.AGREGADOR)
+                self.state = 178
+                self.match(EasySQLParser.T__5)
+                self.state = 179
+                self.match(EasySQLParser.IDENTIFICADOR)
+                self.state = 180
+                self.match(EasySQLParser.T__6)
+                pass
             else:
-                self._errHandler.reportMatch(self)
-                self.consume()
+                raise NoViableAltException(self)
+
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1118,38 +1174,38 @@ class EasySQLParser ( Parser ):
         localctx = EasySQLParser.Tipo_dadoContext(self, self._ctx, self.state)
         self.enterRule(localctx, 28, self.RULE_tipo_dado)
         try:
-            self.state = 176
+            self.state = 191
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [22]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 168
+                self.state = 183
                 self.match(EasySQLParser.T__21)
                 pass
             elif token in [23]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 169
+                self.state = 184
                 self.match(EasySQLParser.T__22)
                 pass
             elif token in [24]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 170
+                self.state = 185
                 self.match(EasySQLParser.T__23)
                 pass
             elif token in [25]:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 171
+                self.state = 186
                 self.match(EasySQLParser.T__24)
-                self.state = 172
+                self.state = 187
                 self.match(EasySQLParser.T__5)
-                self.state = 173
+                self.state = 188
                 self.match(EasySQLParser.NUMERO)
-                self.state = 174
+                self.state = 189
                 self.match(EasySQLParser.T__6)
                 pass
             elif token in [26]:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 175
+                self.state = 190
                 self.match(EasySQLParser.T__25)
                 pass
             else:

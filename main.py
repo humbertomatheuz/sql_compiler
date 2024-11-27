@@ -31,11 +31,11 @@ def analize_campos(campos):
         if numero_campos > 0: campos_text += ', '
         if campo.AGREGADOR():
             agregador = campo.AGREGADOR().getText().strip()
-            if agregador == 'SOMA': 
+            if agregador == 'SOMA' or agregador == 'SUM': 
                 campos_text += f'SUM({campo.IDENTIFICADOR().getText()})'
-            elif agregador == 'CONTAR': 
+            elif agregador == 'CONTAR' or agregador == 'COUNT': 
                 campos_text += f'COUNT({campo.IDENTIFICADOR().getText()})'
-            elif agregador == 'MEDIA': 
+            elif agregador == 'MEDIA' or agregador == 'AVG': 
                 campos_text += f'AVG({campo.IDENTIFICADOR().getText()})'
             elif agregador == 'MAX': 
                 campos_text += f'MAX({campo.IDENTIFICADOR().getText()})'
@@ -61,18 +61,40 @@ def analize_grupos(grupos):
     return grupos_text
 
 def analize_condicoes(condicoes):
-    condicoes_text = ""
-    numero_condicoes = 0
-    for condicao in condicoes.condicao():
-        if numero_condicoes > 0: condicoes_text += ' AND '
-        numero_condicoes += 1
+    if not condicoes:
+        return ""
 
-        if condicao.valor().STRING(): valor = condicao.valor().STRING().getText()
-        else: valor = condicao.valor().NUMERO().getText()
-        
-        condicoes_text += f'{condicao.IDENTIFICADOR().getText()} {condicao.operador().getText()} {valor}'
-    
-    return condicoes_text
+    condicoes_text = []
+    for condicao in condicoes.condicao():
+        if condicao.valor().STRING():
+            valor = condicao.valor().STRING().getText()
+        elif condicao.valor().NUMERO():
+            valor = condicao.valor().NUMERO().getText()
+        else:
+            raise ValueError("Valor inválido na condição.") 
+
+        if condicao.AGREGADOR():
+            agregador = condicao.AGREGADOR().getText()
+            if agregador == 'SOMA' or agregador == 'SUM': 
+                agregador = f'SUM'
+            elif agregador == 'CONTAR' or agregador == 'COUNT': 
+                agregador = f'COUNT'
+            elif agregador == 'MEDIA' or agregador == 'AVG': 
+                agregador = f'AVG'
+            elif agregador == 'MAX': 
+                agregador = f'MAX'
+            elif agregador == 'MIN': 
+                agregador = f'MIN'
+            coluna = condicao.IDENTIFICADOR().getText()
+            operador = condicao.operador().getText()
+            condicoes_text.append(f"{agregador}({coluna}) {operador} {valor}")
+        else:
+            coluna = condicao.IDENTIFICADOR().getText()
+            operador = condicao.operador().getText()
+            condicoes_text.append(f"{coluna} {operador} {valor}")
+
+    return " AND ".join(condicoes_text)
+
 
 def analize_colunas(colunas):
     
@@ -134,13 +156,27 @@ def translate_command(query):
 
     if "MOSTRAR" in query.getText():
         campos_text = analize_campos(query.campos())
+
+        sql_command = f'SELECT {campos_text} FROM {query.IDENTIFICADOR().getText()}'
+
+        sql_grupos = ''
         if query.grupos():
             grupos_text = analize_grupos(query.grupos())
+            sql_grupos += f' GROUP BY {grupos_text}'
 
-        sql_command += f'SELECT {campos_text} FROM {query.IDENTIFICADOR().getText()}'
+        sql_condicoes = ''
         if query.condicoes():
             condicoes_text = analize_condicoes(query.condicoes())
-            sql_command += f' WHERE {condicoes_text};'
+
+            if query.grupos() and any(func in condicoes_text for func in ["SUM(", "COUNT(", "AVG(", "MAX(", "MIN("]):
+                sql_condicoes += f' HAVING {condicoes_text}'
+            else:
+                sql_condicoes += f' WHERE {condicoes_text}'
+        
+        if 'WHERE' in sql_condicoes: sql_command += sql_condicoes + sql_grupos
+        else: sql_command += sql_grupos + sql_condicoes
+        
+        sql_command += ';'
     elif "INSERIR" in query.getText():
         identificador_text = query.IDENTIFICADOR().getText()
         sql_command += f'INSERT INTO {identificador_text} '
