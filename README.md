@@ -46,14 +46,16 @@ python main.py
 ## Exemplo de código:
 
 
-CRIAR TABELA produtos (id INT, nome VARCHAR(50), preco FLOAT);
+CRIAR TABELA produtos (nome VARCHAR(50),marca VARCHAR(100), preco FLOAT);
 
-INSERIR EM produtos VALORES (1, 'Notebook', 3500.00);
-INSERIR EM produtos VALORES (1, 'Notebook', 2500.00);
-INSERIR EM produtos VALORES (1, 'Mouse', 150.00);
-INSERIR EM produtos VALORES (1, 'Monitor', 2000.00);
+INSERIR EM produtos VALORES ('Notebook','DELL', 3500.00); \
+INSERIR EM produtos VALORES ('Notebook','Lenovo', 2500.00); \
+INSERIR EM produtos VALORES ('Mouse','Multilaser', 15.00); \
+INSERIR EM produtos VALORES ('Monitor','Philips', 2000.00); \
 
 MOSTRAR SOMA(preco) DE produtos;
+
+ATUALIZAR preco DEFINIR 20 ONDE nome = 'Multilaser';
 
 MOSTRAR TUDO DE produtos;
 

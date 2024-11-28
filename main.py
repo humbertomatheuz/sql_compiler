@@ -229,5 +229,4 @@ while True:
     query = parser.prog().query()
     sql_command = translate_command(query)
 
-    print(sql_command)
     print(executar_sql(sql_command))
