@@ -59,13 +59,13 @@ Após rodar o código, digite os comandos desejados. Para encerrar a execução,
 
 ## **Exemplo de código:**
 
+### 1. Tabela Com Produtos de Uma Loja
+
 ```
 CRIAR TABELA produtos (nome VARCHAR(50),marca VARCHAR(100), preco FLOAT);
 
-INSERIR EM produtos VALORES ('Notebook','DELL', 3500.00); \
-INSERIR EM produtos VALORES ('Notebook','Lenovo', 2500.00); \
-INSERIR EM produtos VALORES ('Mouse','Multilaser', 15.00); \
-INSERIR EM produtos VALORES ('Monitor','Philips', 2000.00);
+INSERIR EM produtos VALORES ('Notebook','DELL', 3500.00); 
+INSERIR EM produtos VALORES ('Notebook','Lenovo', 2500.00), ('Mouse','Multilaser', 14.99), ('Monitor','Philips', 2000.00);
 
 MOSTRAR SOMA(preco) DE produtos;
 
@@ -76,4 +76,22 @@ MOSTRAR TUDO DE produtos;
 REMOVER DE produtos ONDE preco > 3000;
 
 DELETAR TABELA produtos;
+```
+
+### 2. Tabela com Informação de Atletas
+
+```
+CRIAR TABELA atletas (nome VARCHAR(50),esporte VARCHAR(100),idade INT, aposentado BOOLEAN);
+
+INSERIR EM atletas VALORES ('Cristiano Ronaldo','Futebol', 39, False), ('Chris Bumstead','Fisiculturismo', 29, False),('Mike Tyson','Boxe', 59, True), ('Tiger Woods','Golf', 48, True), ('LeBron James','Basquete', 39, False);
+
+MOSTRAR MEDIA(idade) DE atletas;
+
+ATUALIZAR atletas DEFINIR aposentado = True ONDE nome = 'Chris Bumstead';
+
+MOSTRAR TUDO DE atletas ONDE aposentado = True;
+
+REMOVER DE atletas ONDE esporte = 'Golf';
+
+DELETAR TABELA atletas;
 ```

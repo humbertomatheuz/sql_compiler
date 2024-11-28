@@ -66,12 +66,7 @@ def analize_condicoes(condicoes):
 
     condicoes_text = []
     for condicao in condicoes.condicao():
-        if condicao.valor().STRING():
-            valor = condicao.valor().STRING().getText()
-        elif condicao.valor().NUMERO():
-            valor = condicao.valor().NUMERO().getText()
-        else:
-            raise ValueError("Valor inválido na condição.") 
+        valor = condicao.valor().getText()
 
         if condicao.AGREGADOR():
             agregador = condicao.AGREGADOR().getText()
@@ -107,14 +102,24 @@ def analize_colunas(colunas):
     
     return colunas_text
 
-def analize_valores(valores):
+def analize_valores(tuplas):
     valores_text = ""
-    numero_valores = 0
-    for valor in valores.valor():
-        if numero_valores > 0: valores_text += ', '
-        valores_text += valor.getText()
-        numero_valores += 1
-    
+    numero_tuplas = 0
+    for tupla in tuplas.valores():
+        if numero_tuplas > 0: 
+            valores_text += ', '
+        valores_text += "("
+
+        numero_valores = 0
+        for valor in tupla.valor():  
+            if numero_valores > 0: 
+                valores_text += ', '
+            valores_text += valor.getText()
+            numero_valores += 1
+        
+        valores_text += ")"
+        numero_tuplas += 1
+
     return valores_text
 
 def analize_definicoes(definicoes):
@@ -133,20 +138,11 @@ def analize_atualizacoes(atualizacoes):
      
     for atualizacao in atualizacoes.IDENTIFICADOR():
        
-        valor = atualizacoes.valor()[numero_atualizacoes].getText()  # Valor relacionado ao campo
+        valor = atualizacoes.valor()[numero_atualizacoes].getText() 
         
         if numero_atualizacoes > 0: 
             atualizacoes_text += ', '
         atualizacoes_text += f'{atualizacao.getText()} = {valor}'
-        numero_atualizacoes += 1
-    
-    return atualizacoes_text
-
-    atualizacoes_text = ""
-    numero_atualizacoes = 0
-    for atualizacao in atualizacoes:
-        if numero_atualizacoes > 0: atualizacoes_text += ', '
-        atualizacoes_text += f'{atualizacao.IDENTIFICADOR().getText()} = {atualizacao.valor().getText()}'
         numero_atualizacoes += 1
     
     return atualizacoes_text
@@ -185,8 +181,8 @@ def translate_command(query):
             colunas_text = analize_colunas(query.colunas())
             sql_command += f' ({colunas_text}) '
 
-        valores_text = analize_valores(query.valores())
-        sql_command += f'VALUES ({valores_text});'
+        valores_text = analize_valores(query.tuplas())
+        sql_command += f'VALUES {valores_text};'
     elif "REMOVER" in query.getText():
         sql_command = f'DELETE FROM {query.IDENTIFICADOR().getText()}'
 

@@ -4,7 +4,7 @@ prog: query EOF ;
 
 query
     : 'MOSTRAR' campos 'DE' IDENTIFICADOR ('POR' grupos)? ('ONDE' condicoes)? SEMICOLON
-    | 'INSERIR EM' IDENTIFICADOR ('(' colunas ')')? 'VALORES' '(' valores ')' SEMICOLON 
+    | 'INSERIR EM' IDENTIFICADOR ('(' colunas ')')? 'VALORES' tuplas SEMICOLON 
     | 'REMOVER DE' IDENTIFICADOR ('ONDE' condicoes)? SEMICOLON            
     | 'DELETAR TABELA' IDENTIFICADOR SEMICOLON         
     | 'CRIAR TABELA' IDENTIFICADOR '(' definicoes ')' SEMICOLON 
@@ -17,6 +17,8 @@ campo: AGREGADOR '(' IDENTIFICADOR ')'
     | IDENTIFICADOR 
     ;
 
+tuplas: '(' valores ')' (',' '(' valores ')')* ;
+
 definicoes: definicao (',' definicao)* ;
 
 atualizacoes: IDENTIFICADOR '=' valor ( ',' IDENTIFICADOR '=' valor)* ;
@@ -27,8 +29,8 @@ grupos: IDENTIFICADOR (',' IDENTIFICADOR)*;
 
 condicoes: condicao ('E' condicao)* ;
 
-condicao: IDENTIFICADOR operador valor  // Condições básicas
-        | AGREGADOR '(' IDENTIFICADOR ')' operador valor ; // Condições com agregações
+condicao: IDENTIFICADOR operador valor  
+        | AGREGADOR '(' IDENTIFICADOR ')' operador valor ; 
 
 colunas: IDENTIFICADOR (',' IDENTIFICADOR)* ;
 
@@ -38,17 +40,41 @@ operador: '=' | '<' | '>' | '<=' | '>=' | '!=' ;
 
 valor: STRING 
      | NUMERO 
-     | AGREGADOR '(' IDENTIFICADOR ')' ;  // Suporte a funções agregadas
+     | BOOLEANO 
+     | 'NULL' ;
 
-tipo_dado: 'INT' | 'FLOAT' | 'CHAR' | 'VARCHAR' '(' NUMERO ')' | 'TEXT' ;
+STRING: '\'' (~['\r\n])* '\'' ;
+NUMERO: '-'? [0-9]+ ('.' [0-9]+)? ;
+BOOLEANO: 'True' | 'False' ;
+
+tipo_dado: 'INT' 
+  | 'SMALLINT' 
+  | 'BIGINT' 
+  | 'FLOAT' 
+  | 'REAL' 
+  | 'DOUBLE' 
+  | 'DECIMAL' '(' NUMERO ',' NUMERO ')' 
+  | 'NUMERIC' '(' NUMERO ',' NUMERO ')' 
+  | 'CHAR' '(' NUMERO ')' 
+  | 'VARCHAR' '(' NUMERO ')' 
+  | 'TEXT' 
+  | 'NCHAR' '(' NUMERO ')' 
+  | 'NVARCHAR' '(' NUMERO ')' 
+  | 'BOOLEAN' 
+  | 'DATE' 
+  | 'TIME' 
+  | 'DATETIME' 
+  | 'TIMESTAMP' 
+  | 'YEAR' 
+  | 'BLOB' 
+  | 'VARBINARY' '(' NUMERO ')' 
+  | 'JSON' 
+  | 'XML' 
+  | 'GEOMETRY' ;
 
 AGREGADOR: 'SOMA' | 'CONTAR' | 'MEDIA' | 'MAX' | 'MIN' | 'AVG' | 'SUM' | 'COUNT' ;
 
 IDENTIFICADOR: [a-zA-Z_][a-zA-Z_0-9]* ;
-
-NUMERO: [0-9]+ ('.' [0-9]+)? ;
-
-STRING: '\'' .*? '\'' ;
 
 SEMICOLON: ';' ;
 

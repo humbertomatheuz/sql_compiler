@@ -44,6 +44,15 @@ class EasySQLListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by EasySQLParser#tuplas.
+    def enterTuplas(self, ctx:EasySQLParser.TuplasContext):
+        pass
+
+    # Exit a parse tree produced by EasySQLParser#tuplas.
+    def exitTuplas(self, ctx:EasySQLParser.TuplasContext):
+        pass
+
+
     # Enter a parse tree produced by EasySQLParser#definicoes.
     def enterDefinicoes(self, ctx:EasySQLParser.DefinicoesContext):
         pass
