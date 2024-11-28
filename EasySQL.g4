@@ -3,7 +3,7 @@ grammar EasySQL;
 prog: query EOF ;
 
 query
-    : 'MOSTRAR' campos 'DE' IDENTIFICADOR ('POR' grupos)? ('ONDE' condicoes)? SEMICOLON
+    : 'MOSTRAR' DISTINTO? campos 'DE' IDENTIFICADOR ('POR' grupos)? ('ONDE' condicoes)? SEMICOLON
     | 'INSERIR EM' IDENTIFICADOR ('(' colunas ')')? 'VALORES' tuplas SEMICOLON 
     | 'REMOVER DE' IDENTIFICADOR ('ONDE' condicoes)? SEMICOLON            
     | 'DELETAR TABELA' IDENTIFICADOR SEMICOLON         
@@ -13,9 +13,11 @@ query
 
 campos: campo (',' campo)* ;
 
-campo: AGREGADOR '(' IDENTIFICADOR ')'    
-    | IDENTIFICADOR 
-    ;
+campo: AGREGADOR '(' (DISTINTO IDENTIFICADOR | IDENTIFICADOR) ')'    
+     | DISTINTO IDENTIFICADOR 
+     | IDENTIFICADOR ;
+
+DISTINTO: 'DIFERENTES' | 'DISTINCT';
 
 tuplas: '(' valores ')' (',' '(' valores ')')* ;
 
@@ -72,7 +74,7 @@ tipo_dado: 'INT'
   | 'XML' 
   | 'GEOMETRY' ;
 
-AGREGADOR: 'SOMA' | 'CONTAR' | 'MEDIA' | 'MAX' | 'MIN' | 'AVG' | 'SUM' | 'COUNT' ;
+AGREGADOR: 'SOMA' | 'CONTAGEM' | 'MEDIA' | 'MAX' | 'MIN' | 'AVG' | 'SUM' | 'COUNT' ;
 
 IDENTIFICADOR: [a-zA-Z_][a-zA-Z_0-9]* ;
 

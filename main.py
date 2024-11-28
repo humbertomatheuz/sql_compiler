@@ -29,18 +29,35 @@ def analize_campos(campos):
     numero_campos = 0
     for campo in campos.campo():
         if numero_campos > 0: campos_text += ', '
+        if campo.DISTINTO() and not campo.AGREGADOR():
+            campos_text += f'DISTINCT '
         if campo.AGREGADOR():
             agregador = campo.AGREGADOR().getText().strip()
-            if agregador == 'SOMA' or agregador == 'SUM': 
-                campos_text += f'SUM({campo.IDENTIFICADOR().getText()})'
-            elif agregador == 'CONTAR' or agregador == 'COUNT': 
-                campos_text += f'COUNT({campo.IDENTIFICADOR().getText()})'
-            elif agregador == 'MEDIA' or agregador == 'AVG': 
-                campos_text += f'AVG({campo.IDENTIFICADOR().getText()})'
-            elif agregador == 'MAX': 
-                campos_text += f'MAX({campo.IDENTIFICADOR().getText()})'
-            elif agregador == 'MIN': 
-                campos_text += f'MIN({campo.IDENTIFICADOR().getText()})'
+            if agregador == 'SOMA' or agregador == 'SUM':
+                if campo.DISTINTO():
+                    campos_text += f'SUM(DISTINCT {campo.IDENTIFICADOR().getText()})'
+                else:
+                    campos_text += f'SUM({campo.IDENTIFICADOR().getText()})'
+            elif agregador == 'CONTAGEM' or agregador == 'COUNT':
+                if campo.DISTINTO():
+                    campos_text += f'COUNT(DISTINCT {campo.IDENTIFICADOR().getText()})'
+                else: 
+                    campos_text += f'COUNT({campo.IDENTIFICADOR().getText()})'
+            elif agregador == 'MEDIA' or agregador == 'AVG':
+                if campo.DISTINTO():
+                    campos_text += f'AVG(DISTINCT {campo.IDENTIFICADOR().getText()})'
+                else:
+                    campos_text += f'AVG({campo.IDENTIFICADOR().getText()})'
+            elif agregador == 'MAX':
+                if campo.DISTINTO():
+                    campos_text += f'MAX(DISTINCT {campo.IDENTIFICADOR().getText()})'
+                else: 
+                    campos_text += f'MAX({campo.IDENTIFICADOR().getText()})'
+            elif agregador == 'MIN':
+                if campo.DISTINTO():
+                    campos_text += f'MIN(DISTINCT {campo.IDENTIFICADOR().getText()})'
+                else: 
+                    campos_text += f'MIN({campo.IDENTIFICADOR().getText()})'
         else:
             if campo.getText() == 'TUDO':
                 campos_text += '*'
@@ -72,7 +89,7 @@ def analize_condicoes(condicoes):
             agregador = condicao.AGREGADOR().getText()
             if agregador == 'SOMA' or agregador == 'SUM': 
                 agregador = f'SUM'
-            elif agregador == 'CONTAR' or agregador == 'COUNT': 
+            elif agregador == 'CONTAGEM' or agregador == 'COUNT': 
                 agregador = f'COUNT'
             elif agregador == 'MEDIA' or agregador == 'AVG': 
                 agregador = f'AVG'
@@ -153,7 +170,10 @@ def translate_command(query):
     if "MOSTRAR" in query.getText():
         campos_text = analize_campos(query.campos())
 
-        sql_command = f'SELECT {campos_text} FROM {query.IDENTIFICADOR().getText()}'
+        if query.DISTINTO():
+            sql_command = f'SELECT DISTINCT {campos_text} FROM {query.IDENTIFICADOR().getText()}'
+        else:
+            sql_command = f'SELECT {campos_text} FROM {query.IDENTIFICADOR().getText()}'
 
         sql_grupos = ''
         if query.grupos():
@@ -225,4 +245,5 @@ while True:
     query = parser.prog().query()
     sql_command = translate_command(query)
 
+    print(sql_command)
     print(executar_sql(sql_command))
