@@ -69,7 +69,7 @@ INSERIR EM produtos VALORES ('Notebook','Lenovo', 2500.00), ('Mouse','Multilaser
 
 MOSTRAR SOMA(preco) DE produtos;
 
-ATUALIZAR preco DEFINIR 20 ONDE nome = 'Multilaser';
+ATUALIZAR produtos DEFINIR preco = 20 ONDE marca = 'Multilaser';
 
 MOSTRAR TUDO DE produtos;
 
